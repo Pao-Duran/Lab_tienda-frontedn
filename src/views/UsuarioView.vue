@@ -1,6 +1,16 @@
- <script setup lang="ts"></script>
+<script setup lang="ts"></script>
+
 <template>
-   <RouterView ENDPOINT_API="usuarios"></RouterView>
+  <div>
+    <RouterView ENDPOINT_API="usuarios"></RouterView>
+    <router-link to="/usuarios/crear" class="create-user-link">Crear nuevo usuario</router-link>
+  </div>
 </template>
 
-<style></style> 
+<style>
+.create-user-link {
+  display: block;
+  margin-top: 1rem;
+  color: blue;
+}
+</style>

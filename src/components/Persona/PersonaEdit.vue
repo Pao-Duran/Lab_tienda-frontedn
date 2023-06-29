@@ -10,7 +10,6 @@ const props = defineProps<{
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
 const usuario = ref('')
-const tipoPersona = ref('')
 const nombre = ref('')
 const apellido = ref('')
 const direccion = ref('')
@@ -21,7 +20,6 @@ async function editarProducto() {
   await http
     .patch(`${ENDPOINT}/${id}`, {
         usuario: usuario.value,
-        tipoPersona: tipoPersona.value,
         nombre: nombre.value,
         apellido: apellido.value,
         direccion: direccion.value,
@@ -35,7 +33,6 @@ async function getPersona() {
     ;
 
      (usuario.value = response.data.usuario), 
-     (tipoPersona.value = response.data.tipoPersona), 
      (nombre.value = response.data.nombre), 
      (apellido.value = response.data.apellido), 
      (direccion.value = response.data.direccion),
@@ -74,12 +71,6 @@ onMounted(() => {
           <input type="text" class="form-control" v-model="usuario" placeholder="usuario" required />
           <label for="usuario">Usuario</label>
         </div>
-
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" v-model="tipoPersona" placeholder="tipoPersona" required />
-          <label for="tipoPersona">Tipo Persona</label>
-        </div>
-
     
         <div class="form-floating mb-3">
           <input type="text" class="form-control" v-model="nombre" placeholder="pnombre" required />

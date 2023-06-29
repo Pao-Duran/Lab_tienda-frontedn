@@ -32,6 +32,9 @@ function onSubmit() {
 <style>
 .login {
   padding: 2rem;
+  background-image: url('/src/assets/images/maquillaje.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .title {
@@ -49,7 +52,7 @@ function onSubmit() {
   background: rgba(19, 35, 47, 0.9);
   border-radius: 5px;
   padding: 40px;
-  box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px 4px rgba(185, 52, 138, 0.3);
 }
 
 .form-label {

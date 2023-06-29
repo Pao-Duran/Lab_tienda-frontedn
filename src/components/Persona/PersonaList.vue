@@ -54,7 +54,6 @@ onMounted(() => {
                     <tr>
                         <th scope="col">N°</th>
                         <th scope="col">Usuario</th>
-                        <th scope="col">Tipo Persona</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
                         <th scope="col">Direccion</th>
@@ -68,7 +67,6 @@ onMounted(() => {
                         <th scope="row">{{ index + 1 }}</th>
 
                         <td>{{ persona.usuario }}</td>
-                        <td>{{ persona.tipoPersona }}</td>
                         <td>{{ persona.nombre }}</td>
                         <td>{{ persona.apellido }}</td>
                         <td>{{ persona.direccion }}</td>

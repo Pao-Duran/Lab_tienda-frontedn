@@ -60,7 +60,7 @@ function goBack() {
         </div>
         
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" v-model="descuento" placeholder="cdescuento" required />
+          <input type="text" class="form-control" v-model="descuento" placeholder="descuento" required />
           <label for="descuento">Descuento</label>
         </div>
 

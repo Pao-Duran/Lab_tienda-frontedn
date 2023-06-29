@@ -82,8 +82,8 @@
             <h5 class="site-footer-title mb-3">Informaciones</h5>
   
             <p class="text-white d-flex mb-1">
-              <a href="tel: 090-080-0760" class="site-footer-link">
-                090-080-0760
+              <a href="tel:67454526-76343350 " class="site-footer-link">
+                67454526-76343350
               </a>
             </p>
   
@@ -137,12 +137,14 @@
                 </li>
   
                 <li class="site-footer-link-item">
-                  <a href="#" class="site-footer-link">Privacy Policy</a>
+                  <a href="#" class="site-footer-link">Privaidad y Politica</a>
                 </li>
   
                 <li class="site-footer-link-item">
                   <a href="#" class="site-footer-link">Your Feedback</a>
+                
                 </li>
+                
               </ul>
             </div>
           </div>

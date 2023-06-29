@@ -58,6 +58,7 @@ onMounted(() => {
                         <th scope="col">idProducto</th>
                         <th scope="col">Cantidad</th>
                         <th scope="col">Precio</th>
+                        <th scope="col">Descuentos</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>

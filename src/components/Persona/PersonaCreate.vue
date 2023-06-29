@@ -9,7 +9,6 @@ const props = defineProps<{
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
 const usuario = ref('')
-const tipoPersona = ref('')
 const nombre = ref('')
 const apellido = ref('')
 const direccion = ref('')
@@ -19,7 +18,7 @@ const email = ref('')
 
 async function crearPersona() {
   await http
-    .post(ENDPOINT, {usuario: usuario.value, tipoPersona: tipoPersona.value, nombre: nombre.value, apellido: apellido.value, direccion: direccion.value, email: email.value })
+    .post(ENDPOINT, {usuario: usuario.value, nombre: nombre.value, apellido: apellido.value, direccion: direccion.value, email: email.value })
     .then(() => router.push('/personas'))
 }
 
@@ -51,12 +50,6 @@ function goBack() {
           <input type="text" class="form-control" v-model="usuario" placeholder="usuario" required />
           <label for="usuario">Usuario</label>
         </div>
-
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" v-model="tipoPersona" placeholder="tipoPersona" required />
-          <label for="tipoPersona">Tipo Persona</label>
-        </div>
-
     
         <div class="form-floating mb-3">
           <input type="text" class="form-control" v-model="nombre" placeholder="pnombre" required />
