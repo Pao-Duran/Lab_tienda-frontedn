@@ -55,7 +55,6 @@ onMounted(() => {
                 <thead>
                     <tr>
                         <th scope="col">N°</th>
-                        <th scope="col">idProducto</th>
                         <th scope="col">Cantidad</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Descuentos</th>
@@ -67,7 +66,6 @@ onMounted(() => {
                     <tr v-for="(venta, index) in ventas.values()" :key="venta.id">
 
                         <th scope="row">{{ index + 1 }}</th>
-                        <td>{{ venta.idProducto }}</td>
                         <td>{{ venta.cantidad }}</td>
                         <td>{{ venta.precio }}</td>
                         <td>{{ venta.descuento }}</td>

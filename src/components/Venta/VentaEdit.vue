@@ -8,7 +8,7 @@ const props = defineProps<{
 }>()
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
-const idProducto = ref('')
+//const idProducto = ref('')
 const cantidad = ref('')
 const precio = ref('')
 const descuento = ref('')
@@ -17,11 +17,11 @@ const id = ref(0)
 async function editarVenta() {
   await http
     .patch(`${ENDPOINT}/${id}`, {
-        idProducto: idProducto.value,
+        //idProducto: idProducto.value,
         cantidad: cantidad.value,
         precio: precio.value,
         descuento: descuento.value
-        
+
     })
     .then(() => router.push('/ventas'))
 }
@@ -29,7 +29,7 @@ async function editarVenta() {
 async function getVenta() {
   await http.get(`${ENDPOINT}/${id}`).then((response) => {
     ;
-    (idProducto.value = response.data.idProducto)
+    //(idProducto.value = response.data.idProducto)
     (cantidad.value = response.data.cantidad)
     (precio.value = response.data.precio)
     (descuento.value = response.data.descuento)
@@ -65,11 +65,11 @@ onMounted(() => {
     <div class="row">
       <form @submit.prevent="editarVenta">
 
-        <div class="form-floating mb-3">
+        <!-- <div class="form-floating mb-3">
           <input type="text" class="form-control" v-model="idProducto" placeholder="idProducto" required />
           <label for="idProducto">idProducto</label>
-        </div>
-        
+        </div> -->
+
         <div class="form-floating mb-3">
           <input type="text" class="form-control" v-model="cantidad" placeholder="cantidad" required />
           <label for="cantidad">Cantidad</label>
@@ -79,7 +79,7 @@ onMounted(() => {
           <input type="text" class="form-control" v-model="precio" placeholder="precio" required />
           <label for="precio">precio</label>
         </div>
-        
+
         <div class="form-floating mb-3">
           <input type="text" class="form-control" v-model="descuento" placeholder="cdescuento" required />
           <label for="descuento">Descuento</label>
